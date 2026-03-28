@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Female Psychology | The Brutal Truth</title>
+    
+    <!-- Tailwind CSS & Lucide Icons -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts: Arima (Malayalam & Latin) & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'arima': ['"Arima"', 'serif'],
+                        'inter': ['"Inter"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            red: '#e11d48',
+                            dark: '#030303',
+                            gray: '#121212',
+                            border: '#262626'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Smooth Scrolling */
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #030303;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        .malayalam-text {
+            font-family: 'Arima', serif;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #ff4b4b 0%, #b91c1c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+
+        .glow-effect {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(225, 29, 72, 0.15) 0%, rgba(0,0,0,0) 70%);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Fixed 3D Book Styles for all Browsers */
+        .perspective-container { perspective: 1000px; }
+        
+        .book-3d {
+            box-shadow: 
+                -15px 15px 30px rgba(0, 0, 0, 0.95), 
+                0 0 20px rgba(225, 29, 72, 0.25),
+                inset 1px 0 5px rgba(255, 255, 255, 0.1);
+            transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.6s ease;
+            transform: rotateY(-8deg); /* Default slight angle */
+        }
+
+        .group:hover .book-3d {
+            transform: translateY(-10px) rotateY(0deg) scale(1.04);
+            box-shadow: 
+                -25px 25px 50px rgba(0, 0, 0, 0.9), 
+                0 0 45px rgba(225, 29, 72, 0.45);
+        }
+
+        .bento-card {
+            background: linear-gradient(145deg, #121212 0%, #0a0a0a 100%);
+            border: 1px solid #262626;
+            transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .bento-card:hover {
+            border-color: #e11d4860;
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px -10px rgba(225, 29, 72, 0.15);
+        }
+        
+        /* Pulse Animation for Status Tag */
+        @keyframes custom-pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+        .status-dot { animation: custom-pulse 2s infinite; }
+    </style>
+</head>
+<body class="bg-brand-dark min-h-screen relative pb-28 lg:pb-0 selection:bg-brand-red selection:text-white">
+
+    <!-- Background Grid -->
+    <div class="fixed inset-0 bg-grid z-0 pointer-events-none opacity-40"></div>
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 bg-brand-dark/80 backdrop-blur-lg border-b border-brand-border">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="font-bold text-lg tracking-widest uppercase flex items-center gap-2 text-white">
+                <i data-lucide="flame" class="text-brand-red w-5 h-5"></i> Aethonix
+            </div>
+            <a href="#checkout" class="text-xs font-bold tracking-widest bg-white text-black px-5 py-2 rounded-full uppercase hover:bg-gray-200 transition-colors">
+                Buy Now
+            </a>
+        </div>
+    </header>
+
+    <main class="relative z-10 pt-28 pb-20 px-4 sm:px-6">
+        <div class="max-w-4xl mx-auto flex flex-col items-center">
+            
+            <!-- Hero Typography -->
+            <div class="text-center mb-10 w-full">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-red/10 border border-brand-red/20 text-brand-red text-xs font-bold mb-6 tracking-widest uppercase">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-red status-dot"></span>
+                    #1 Best Seller 2026
+                </div>
+                
+                <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight mb-6 leading-[1.05] text-white">
+                    Stop Chasing. <br>
+                    Start <span class="text-gradient">Attracting.</span>
+                </h1>
+                
+                <h2 class="malayalam-text text-xl sm:text-3xl text-gray-300 font-medium leading-relaxed max-w-3xl mx-auto mb-6">
+                    എന്തിനാണ് അവൾക്ക് നിങ്ങളെ വെറുമൊരു <span class="text-brand-red font-bold">'Friend'</span> ആയി മാത്രം തോന്നുന്നത്?
+                </h2>
+                
+                <p class="text-gray-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+                    Decode the female mind. സിനിമകൾ പഠിപ്പിച്ച കെട്ടുകഥകൾ മറക്കാം. യഥാർത്ഥ Female Psychology പഠിച്ച് നിങ്ങളുടെ വ്യക്തിത്വം മാറ്റിമറിക്കാം.
+                </p>
+            </div>
+
+            <!-- Focused Product Display & Pricing -->
+            <div class="w-full max-w-3xl relative mt-4">
+                <div class="glow-effect"></div>
+                
+                <div class="flex flex-col md:flex-row items-center justify-center gap-10 bg-brand-gray/50 backdrop-blur-sm border border-brand-border rounded-3xl p-8 sm:p-10 relative z-10">
+                    
+                    <!-- Book Cover Container with Perspective Wrapper -->
+                    <div class="w-full max-w-[220px] aspect-[1/1.414] relative perspective-container shrink-0 group">
+                        
+                        <!-- Extra Red Aura Border Effect -->
+                        <div class="absolute inset-0 bg-brand-red/10 blur-3xl rounded-md z-0 opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                        <!-- ========================================================================= -->
+                        <!-- 👇👇👇 IMAGE INSERTION SECTION: ADD YOUR BOOK COVER HERE 👇👇👇 -->
+                        <!-- ========================================================================= -->
+                        <img src="image.png" 
+                             alt="Female Psychology Malayalam Book Cover - Aethonix Publishing" 
+                             class="w-full h-full object-cover rounded-md rounded-l-sm book-3d border border-brand-red/30 border-l-[10px] border-l-black ring-1 ring-brand-red/10 relative z-20">
+                        <!-- ========================================================================= -->
+                        
+                    </div>
+
+                    <!-- Checkout Info -->
+                    <div id="checkout" class="flex flex-col items-center md:items-start text-center md:text-left w-full">
+                        <span class="text-brand-red text-xs font-bold tracking-widest uppercase mb-6">E-Book PDF</span>
+                        
+                        <div class="flex items-end gap-3 mb-8">
+                            <span class="text-5xl font-bold text-white tracking-tight">₹149</span>
+                            <span class="text-gray-500 line-through text-xl font-medium mb-1">₹239</span>
+                            <span class="text-green-500 text-sm font-bold ml-1 mb-2">Save 37%</span>
+                        </div>
+
+                        <!-- ========================================================================= -->
+                        <!-- 👇👇👇 BUY NOW LINK SECTION: ADD YOUR POTHI LINK HERE 👇👇👇 -->
+                        <!-- ========================================================================= -->
+                        <a href="https://pothi.com" target="_blank" rel="noopener noreferrer" class="w-full bg-brand-red hover:bg-[#be123c] text-white font-bold text-lg py-4 px-8 rounded-xl flex items-center justify-center gap-3 transition-all shadow-[0_0_20px_rgba(225,29,72,0.3)] hover:shadow-[0_0_30px_rgba(225,29,72,0.5)]">
+                            <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                            Buy Now on Pothi.com
+                        </a>
+                        <!-- ========================================================================= -->
+
+                        <div class="flex items-center justify-center md:justify-start gap-2 mt-4 text-xs text-gray-500 uppercase tracking-wider font-semibold">
+                            <i data-lucide="shield-check" class="w-4 h-4 text-gray-400"></i> Secure & Instant Download
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Value Proposition (Bento Grid) -->
+            <div class="w-full max-w-4xl mt-24">
+                <div class="text-center mb-10">
+                    <h3 class="malayalam-text text-2xl font-bold text-white mb-2 tracking-wide">ഈ പുസ്തകത്തിൽ നിങ്ങൾ എന്തൊക്കെ പഠിക്കും?</h3>
+                    <p class="text-gray-500 text-sm font-medium">Actionable psychology, not cheap tricks.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    
+                    <div class="bento-card p-6 sm:p-8 rounded-2xl flex flex-col gap-4">
+                        <div class="w-12 h-12 rounded-full bg-brand-red/10 flex items-center justify-center text-brand-red">
+                            <i data-lucide="microscope" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2">Research-Based Guide</h4>
+                            <p class="malayalam-text text-gray-400 leading-relaxed text-[15px]">ഇതൊരു വ്യക്തിപരമായ ഉപദേശമല്ല. ശാസ്ത്രീയ പഠനങ്ങളെയും മനഃശാസ്ത്രത്തെയും (Psychology) അടിസ്ഥാനമാക്കിയുള്ളതാണ്.</p>
+                        </div>
+                    </div>
+
+                    <div class="bento-card p-6 sm:p-8 rounded-2xl flex flex-col gap-4">
+                        <div class="w-12 h-12 rounded-full bg-brand-red/10 flex items-center justify-center text-brand-red">
+                            <i data-lucide="user-x" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2">Kill the "Nice Guy"</h4>
+                            <p class="malayalam-text text-gray-400 leading-relaxed text-[15px]">എല്ലാത്തിനും തലകുലുക്കി സമ്മതിച്ച്, നിങ്ങളുടെ സ്വന്തം വില കളയുന്ന ആ പഴയ സ്വഭാവം എന്നെന്നേക്കുമായി നിർത്താം.</p>
+                        </div>
+                    </div>
+
+                    <div class="bento-card p-6 sm:p-8 rounded-2xl flex flex-col gap-4">
+                        <div class="w-12 h-12 rounded-full bg-brand-red/10 flex items-center justify-center text-brand-red">
+                            <i data-lucide="message-circle" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2">The Power of Texting</h4>
+                            <p class="malayalam-text text-gray-400 leading-relaxed text-[15px]">അമിതമായി മെസ്സേജ് അയച്ച് ബോറടിപ്പിക്കാതെ, വളരെ സ്മാർട്ട് ആയി സംസാരിച്ച് അവളിൽ ആകാംക്ഷ ഉണ്ടാക്കാം.</p>
+                        </div>
+                    </div>
+
+                    <div class="bento-card p-6 sm:p-8 rounded-2xl flex flex-col gap-4">
+                        <div class="w-12 h-12 rounded-full bg-brand-red/10 flex items-center justify-center text-brand-red">
+                            <i data-lucide="flag-triangle-right" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2">Read the Red Flags</h4>
+                            <p class="malayalam-text text-gray-400 leading-relaxed text-[15px]">നിങ്ങളുടെ സമാധാനം കെടുത്തുന്ന ടോക്സിക് (Toxic) ബന്ധങ്ങളെ തുടക്കത്തിൽ തന്നെ ഒഴിവാക്കാൻ പഠിക്കാം.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-brand-border bg-brand-dark py-12 relative z-10 mt-10">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="malayalam-text text-xs sm:text-sm text-gray-500 leading-relaxed max-w-2xl mx-auto mb-6">
+                Disclaimer: ഈ പുസ്തകം സ്ത്രീകളെ കബളിപ്പിക്കാനോ (Manipulation) വേണ്ടിയുള്ളതല്ല. ബഹുമാനത്തോടെയുള്ള, ആരോഗ്യകരമായ ബന്ധങ്ങൾ വളർത്തുക എന്നതാണ് ഇതിന്റെ യഥാർത്ഥ ലക്ഷ്യം.
+            </p>
+            <p class="text-xs text-gray-600 font-bold tracking-widest uppercase">© 2026 Aethonix Publishing. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile Buy Button (Fixed Padding Issue) -->
+    <div class="lg:hidden fixed bottom-0 left-0 w-full p-4 bg-brand-dark/95 backdrop-blur-2xl border-t border-brand-border z-[60] flex items-center justify-between shadow-[0_-10px_30px_rgba(0,0,0,0.9)]">
+        <div class="flex flex-col">
+            <span class="text-gray-400 text-[10px] uppercase font-bold tracking-widest">E-Book</span>
+            <div class="flex items-center gap-2">
+                <span class="text-white font-bold text-xl">₹149</span>
+                <span class="text-gray-500 line-through text-xs font-medium">₹239</span>
+            </div>
+        </div>
+        
+        <!-- ========================================================================= -->
+        <!-- 👇👇👇 MOBILE BUY NOW LINK: ADD YOUR POTHI LINK HERE TOO 👇👇👇 -->
+        <!-- ========================================================================= -->
+        <a href="https://pothi.com" target="_blank" rel="noopener noreferrer" class="bg-brand-red text-white font-bold text-sm py-3 px-8 rounded-lg flex items-center gap-2 uppercase tracking-wide shadow-[0_0_20px_rgba(225,29,72,0.4)] active:scale-95 transition-transform">
+            <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+            Buy Now
+        </a>
+    </div>
+
+    <!-- Initialization Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+        
+        // Final Testing Log
+        console.log("Aethonix Landing Page: Smooth and Running.");
+    </script>
+</body>
+</html>
