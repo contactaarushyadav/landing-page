@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Female Psychology | The Brutal Truth</title>
+    <title>Female Psychology for men in love</title>
     
     <!-- Tailwind CSS & Lucide Icons -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -155,6 +155,10 @@
             border-radius: 0 1rem 1rem 0;
             display: inline-block;
         }
+        
+        /* DETAILS/SUMMARY FIX */
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
     </style>
 </head>
 <body class="bg-brand-dark min-h-screen relative pb-28 lg:pb-0 selection:bg-brand-red selection:text-white">
@@ -178,7 +182,7 @@
             <div class="font-bold text-lg tracking-widest uppercase flex items-center gap-2 text-white font-inter">
                 <i data-lucide="flame" class="text-brand-red w-5 h-5"></i> Aethonix
             </div>
-            <a href="https://pothi.com" target="_blank" class="text-xs font-bold tracking-widest bg-white text-black px-5 py-2 rounded-full uppercase hover:bg-gray-200 transition-colors">
+            <a href="#checkout" class="text-xs font-bold tracking-widest bg-white text-black px-5 py-2 rounded-full uppercase hover:bg-gray-200 transition-colors">
                 Buy Now
             </a>
         </div>
@@ -252,9 +256,9 @@
                         </div>
 
                         <!-- Buy Now Button -->
-                        <a href="https://pothi.com" target="_blank" class="btn-animate w-full md:max-w-[260px] bg-brand-red hover:bg-[#be123c] text-white font-bold text-base py-3 px-6 rounded-xl flex items-center justify-center gap-3 transition-all active:scale-95 font-inter uppercase tracking-wide">
+                        <a href="#checkout" class="btn-animate w-full md:max-w-[260px] bg-brand-red hover:bg-[#be123c] text-white font-bold text-base py-3 px-6 rounded-xl flex items-center justify-center gap-3 transition-all active:scale-95 font-inter uppercase tracking-wide">
                             <i data-lucide="shopping-bag" class="w-5 h-5"></i>
-                            Buy on Pothi.com
+                            Get Instant Access
                         </a>
                         
                         <div class="flex items-center justify-center md:justify-start gap-2 mt-3 text-xs text-gray-500 uppercase tracking-wider font-semibold font-inter">
@@ -310,11 +314,27 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </main>
 
     <footer class="border-t border-brand-border bg-brand-dark py-10 relative z-10 mt-8">
         <div class="max-w-4xl mx-auto px-6 text-center">
+            
+            <!-- Quick Links -->
+            <div class="flex flex-wrap justify-center gap-4 sm:gap-8 mb-5 text-[11px] sm:text-xs font-inter text-gray-400 uppercase tracking-widest">
+                <a href="#" onclick="event.preventDefault(); openModal('about');" class="hover:text-brand-red transition-colors">About Us</a>
+                <a href="#" onclick="event.preventDefault(); openModal('privacy');" class="hover:text-brand-red transition-colors">Privacy Policy</a>
+                <a href="#" onclick="event.preventDefault(); openModal('terms');" class="hover:text-brand-red transition-colors">Terms & Conditions</a>
+                <a href="#" onclick="event.preventDefault(); openModal('refund');" class="hover:text-brand-red transition-colors">Refund Policy</a>
+            </div>
+            
+            <!-- Contact Email -->
+            <div class="flex items-center justify-center gap-2 mb-8 text-xs sm:text-sm font-inter text-gray-300">
+                <i data-lucide="mail" class="w-4 h-4 text-brand-red"></i>
+                <a href="mailto:aethonixpublishing@gmail.com" class="hover:text-white transition-colors">aethonixpublishing@gmail.com</a>
+            </div>
+
             <p class="malayalam-text text-[11px] sm:text-xs text-gray-500 leading-relaxed max-w-2xl mx-auto mb-4">
                 Disclaimer: ഈ പുസ്തകം സ്ത്രീകളെ കബളിപ്പിക്കാനോ (Manipulation) വേണ്ടിയുള്ളതല്ല. ബഹുമാനത്തോടെയുള്ള, ആരോഗ്യകരമായ ബന്ധങ്ങൾ വളർത്തുക എന്നതാണ് ഇതിന്റെ യഥാർത്ഥ ലക്ഷ്യം.
             </p>
@@ -331,15 +351,97 @@
                 <span class="text-gray-500 line-through text-[10px] font-medium font-inter">₹239</span>
             </div>
         </div>
-        <a href="https://pothi.com" target="_blank" class="btn-animate bg-brand-red text-white font-bold text-sm py-2.5 px-6 rounded-lg flex items-center gap-2 uppercase tracking-wide font-inter active:scale-95 transition-transform">
+        <a href="#checkout" class="btn-animate bg-brand-red text-white font-bold text-sm py-2.5 px-6 rounded-lg flex items-center gap-2 uppercase tracking-wide font-inter active:scale-95 transition-transform">
             <i data-lucide="shopping-bag" class="w-4 h-4"></i>
             Buy Now
         </a>
     </div>
 
+    <!-- Legal Modal (Popup Box) -->
+    <div id="legal-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[100] hidden flex items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+        <div class="bg-[#150a0a] border border-[#2a1a1a] rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto relative transform scale-95 transition-transform duration-300 shadow-2xl" id="modal-box">
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-5 right-5 text-gray-400 hover:text-white bg-[#0a0505] rounded-full p-2 border border-[#2a1a1a] transition-colors z-10">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            
+            <div class="p-6 sm:p-8">
+                <h3 class="text-xl sm:text-2xl font-bold text-white mb-6 flex items-center gap-3 border-b border-[#2a1a1a] pb-4">
+                    <span id="modal-icon-container" class="text-brand-red"></span>
+                    <span id="modal-title">Title</span>
+                </h3>
+                <div id="modal-content" class="text-gray-400 text-sm leading-relaxed font-inter space-y-4">
+                    <!-- Content injected via JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script>
         lucide.createIcons();
+
+        // Legal Content Data
+        const legalContent = {
+            'about': {
+                title: 'About Us',
+                icon: 'info',
+                content: '<p><strong>Aethonix Publishing</strong> is an independent self-publishing platform. We focus on bringing direct, research-based insights to our readers through high-quality digital e-books.</p><p>Our goal is to provide practical, actionable knowledge on topics like human psychology and self-improvement without unnecessary filler. When you purchase from us, you are directly supporting independent publishing.</p>'
+            },
+            'privacy': {
+                title: 'Privacy Policy',
+                icon: 'shield',
+                content: '<p>We highly value your privacy and are committed to protecting your personal data. Any personal information (such as name, email address, and payment details) collected during checkout via our secure payment gateway is used strictly for order processing, instant digital delivery, and crucial customer support.</p><p>We implement industry-standard security measures and will <strong>never</strong> sell, rent, or share your data with unauthorized third parties or marketing agencies.</p>'
+            },
+            'terms': {
+                title: 'Terms & Conditions',
+                icon: 'file-text',
+                content: '<p>By accessing our website and purchasing our digital products, you agree to be bound by the following terms:</p><ul class="list-disc pl-5 space-y-2"><li><strong>Digital License:</strong> Upon purchase, you are granted a non-exclusive, non-transferable license to download and access the E-Book for personal, non-commercial use only.</li><li><strong>Copyright & Intellectual Property:</strong> All content, designs, concepts, and formatting within the e-book are the exclusive intellectual property of Aethonix Publishing. Unauthorized distribution, copying, file-sharing, or reselling of this digital product is strictly prohibited and will result in immediate legal action.</li><li><strong>Medical Disclaimer:</strong> The content provided is strictly for educational and informational purposes. It does not replace professional psychological, psychiatric, or medical advice.</li><li><strong>Modifications:</strong> We reserve the right to modify prices, discount offers, and these terms at any time without prior notice.</li></ul><p>If you do not agree to these terms, please refrain from purchasing or using our digital materials.</p>'
+            },
+            'refund': {
+                title: 'Refund & Cancellation Policy',
+                icon: 'refresh-cw',
+                content: '<p>As this is an instantly downloadable digital product (E-Book PDF), all sales are considered final once the transaction is completed.</p><p>Due to the nature of digital goods, we <strong>do not offer refunds, returns, or cancellations</strong> under any circumstances. Please ensure you are ready to purchase and have read the book\'s description carefully before completing your payment. If you experience technical issues downloading the file, please contact our support team immediately via email.</p>'
+            }
+        };
+
+        const modal = document.getElementById('legal-modal');
+        const modalBox = document.getElementById('modal-box');
+        const modalTitle = document.getElementById('modal-title');
+        const modalContent = document.getElementById('modal-content');
+        const modalIconContainer = document.getElementById('modal-icon-container');
+
+        // Function to open Modal dynamically
+        function openModal(key) {
+            const data = legalContent[key];
+            if(!data) return;
+            
+            modalTitle.textContent = data.title;
+            modalContent.innerHTML = data.content;
+            modalIconContainer.innerHTML = '<i data-lucide="' + data.icon + '" class="w-6 h-6"></i>';
+            lucide.createIcons(); 
+            
+            modal.classList.remove('hidden');
+            void modal.offsetWidth; // Trigger reflow for smooth animation
+            modal.classList.remove('opacity-0');
+            modalBox.classList.remove('scale-95');
+        }
+
+        // Function to close Modal
+        function closeModal() {
+            modal.classList.add('opacity-0');
+            modalBox.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300); 
+        }
+
+        // Close modal when clicking outside the box
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
 
         // 18-Minute Urgency Timer Logic
         let totalSeconds = 18 * 60;
